@@ -9,11 +9,6 @@ exports.create = (req, res) => {
         });
     }
 
-    if(!req.body.isFormateur) {
-        return res.status(400).send({
-            message: "User isFormateur can not be empty"
-        });
-    }
 
     // Create a User
     const user = new User({
@@ -77,11 +72,6 @@ exports.update = (req, res) => {
         });
     }
 
-    if(!req.body.isFormateur) {
-        return res.status(400).send({
-            message: "User isFormateur can not be empty"
-        });
-    }
 
     // Find user and update it with the request body
     User.findByIdAndUpdate(req.params.userId, {
