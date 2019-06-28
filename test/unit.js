@@ -8,11 +8,11 @@ let should = chai.should();
 
 chai.use(chaiHttp);
 describe("Books", function(){
-    describe ("DELETE ALL", function(){
+    describe ("ALL USERS", function(){
         it("should remove all first", done=>{
             console.log ("Deleting all data in db first.")
             chai.request(server)
-                .get("/posts/")
+                .get("/users/")
                 .send({})
                 .end((err,res)=>{
                     //console.log (res)
