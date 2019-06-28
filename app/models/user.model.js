@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const UserSchema = mongoose.Schema({
     name: String,
-    email: {String, unique: true, required: true },
-    isFormateur: { type: Boolean, unique: true, required: true },
+    email: String,
+    isFormateur: Boolean,
 }, {
     timestamps: true
 });
